@@ -1,0 +1,19 @@
+name: SPMTest
+options:
+  bundleIdPrefix: com.mapbox.navigationnative.SPM
+packages:
+  MapboxNavigationNative:
+    url: git@github.com:mapbox/mapbox-navigation-native-ios.git
+    from: 0.0.0
+targets:
+  SPMTest:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.2"
+    sources: [Sources]
+    dependencies:
+      - sdk: libc++.tbd
+      - package: MapboxNavigationNative
+    settings:
+        DEVELOPMENT_TEAM: "GJZR2MEM28"
+        OTHER_LDFLAGS: "-lc++"
