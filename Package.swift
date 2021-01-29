@@ -4,9 +4,9 @@ import PackageDescription
 import Foundation
 
 let registry = SDKRegistry()
-let version = "29.0.0"
-let mapboxCommonVersion = Version("9.1.0") 
-let checksum = "09c2b7d6af86feeafaa62ecf3d0ec5557f48a59ed604126ab296bfbae702e95c"
+let version = "40.0.0"
+let mapboxCommonVersion = Version("10.0.0-beta.8") 
+let checksum = "8fd54eee4277f1327015cc0bcaed8a878bf44d1804364cd5d93dfab9e2d1a5af"
 
 let package = Package(
     name: "MapboxNavigationNative",
