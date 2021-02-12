@@ -11,5 +11,6 @@ targets:
       - framework: Carthage/Build/iOS/MapboxCommon.framework
       - sdk: libc++.tbd
     settings:
+        VALIDATE_WORKSPACE: "NO"
         DEVELOPMENT_TEAM: "GJZR2MEM28"
         OTHER_LDFLAGS: "-lc++"

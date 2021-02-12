@@ -10,6 +10,7 @@ targets:
     dependencies:
       - sdk: libc++.tbd
     settings:
+        VALIDATE_WORKSPACE: "NO"
         DEVELOPMENT_TEAM: "GJZR2MEM28"
         SUPPORTS_MACCATALYST: YES
         DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER: YES
