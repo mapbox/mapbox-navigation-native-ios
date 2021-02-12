@@ -4,7 +4,7 @@ options:
 packages:
   MapboxNavigationNative:
     url: git@github.com:mapbox/mapbox-navigation-native-ios.git
-    from: 31.0.1
+    from: 0.37.73
 targets:
   SPMTest:
     type: application
