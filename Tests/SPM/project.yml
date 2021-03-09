@@ -5,7 +5,7 @@ packages:
   MapboxCommon:
     url: https://github.com/mapbox/mapbox-common-ios.git
   MapboxNavigationNative:
-    from: 0.0.423773
+		from: 0.0.423778
     url: https://github.com/mapbox/mapbox-navigation-native-ios.git
 
 targets:
