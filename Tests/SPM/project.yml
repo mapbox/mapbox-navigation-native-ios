@@ -4,10 +4,10 @@ options:
 packages:
   MapboxCommon:
     url: https://github.com/mapbox/mapbox-common-ios.git
-    from: 10.0.0-beta.12
   MapboxNavigationNative:
-    url: https://github.com/mapbox/mapbox-navigation-native-ios.git
     from: 0.0.423773
+    url: https://github.com/mapbox/mapbox-navigation-native-ios.git
+
 targets:
   SPMTest:
     type: application
