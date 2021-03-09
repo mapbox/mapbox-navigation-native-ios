@@ -77,12 +77,16 @@ def change_test_podfile(version):
         f.write(podfile)
 
 
-def change_test_spm_project(version):
+def change_test_spm_project(version, common_version):
     with open(TEST_SPM_PROJECT, 'r') as f:
         spm_project = f.read()
         spm_project = re.sub(
-            r'from: .+', 
-            f'from: {version}', 
+            r'MapboxNavigationNative:\n.+from: .+', 
+            f'MapboxNavigationNative:\n\t\tfrom: {version}', 
+            spm_project)
+        spm_project = re.sub(
+            r'MapboxCommon:\n.+from: .+', 
+            f'MapboxCommon:\n\t\tfrom: {common_version}', 
             spm_project)
 
     with open(TEST_SPM_PROJECT, 'w') as f:
@@ -101,4 +105,4 @@ if __name__ == '__main__':
     change_package_swift(args.version, args.common_version, args.checksum)
     change_test_cartfile(args.version, args.common_version)
     change_test_podfile(args.version)
-    change_test_spm_project(args.version)
+    change_test_spm_project(args.version, args.common_version)
