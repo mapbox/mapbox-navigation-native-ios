@@ -82,11 +82,11 @@ def change_test_spm_project(version, common_version):
         spm_project = f.read()
         spm_project = re.sub(
             r'MapboxNavigationNative:\n.+from: .+', 
-            f'MapboxNavigationNative:\n\t\tfrom: {version}', 
+            f'MapboxNavigationNative:\n    from: {version}', 
             spm_project)
         spm_project = re.sub(
             r'MapboxCommon:\n.+from: .+', 
-            f'MapboxCommon:\n\t\tfrom: {common_version}', 
+            f'MapboxCommon:\n    from: {common_version}', 
             spm_project)
 
     with open(TEST_SPM_PROJECT, 'w') as f:
