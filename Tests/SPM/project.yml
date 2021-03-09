@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: com.mapbox.navigationnative.SPM
 packages:
   MapboxCommon:
+    from: 10.0.0-beta.12
     url: https://github.com/mapbox/mapbox-common-ios.git
   MapboxNavigationNative:
     from: 0.0.423779
