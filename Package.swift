@@ -18,7 +18,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", .exact(mapboxCommonVersion)),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
     ],
     targets: [
         registry.mapboxNavigationNativeTarget(version: version, checksum: checksum),
