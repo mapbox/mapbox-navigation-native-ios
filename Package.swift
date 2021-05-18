@@ -4,9 +4,9 @@ import PackageDescription
 import Foundation
 
 let registry = SDKRegistry()
-let version = "48.0.3"
-let mapboxCommonVersion = Version("11.0.1") 
-let checksum = "9233bcb28551ded20157c22e78d5bdc0ff859e1e6423bed34461b3310f23cc22"
+let version = "49.0.1"
+let mapboxCommonVersion = Version("11.0.2") 
+let checksum = "3c151a91ef38336493facdb74efac5932b056b2740363e81d37e2439c6b11181"
 
 let package = Package(
     name: "MapboxNavigationNative",
@@ -18,7 +18,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", .exact(mapboxCommonVersion)),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
     ],
     targets: [
         registry.mapboxNavigationNativeTarget(version: version, checksum: checksum),
