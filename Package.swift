@@ -14,13 +14,17 @@ let package = Package(
     products: [
         .library(
             name: "MapboxNavigationNative",
-            targets: ["MapboxNavigationNative"]
+            targets: ["MapboxNavigationNativeWrapper"]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
+        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
     ],
     targets: [
+        .target(
+            name: "MapboxNavigationNativeWrapper",
+            dependencies: ["MapboxCommon", "MapboxNavigationNative"]
+        ),
         registry.mapboxNavigationNativeTarget(version: version, checksum: checksum),
         .testTarget(
             name: "MapboxNavigationNativeTests",
