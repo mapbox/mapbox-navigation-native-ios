@@ -36,7 +36,7 @@ Add the following code to your Cartfile.
 
 ```bash
 binary "https://api.mapbox.com/downloads/v2/carthage/mobile-navigation-native/MapboxNavigationNative.json" == 80.0.0
-binary "https://api.mapbox.com/downloads/v2/carthage/mapbox-common/MapboxCommon-ios.json" == v20.1.0
+binary "https://api.mapbox.com/downloads/v2/carthage/mapbox-common/MapboxCommon-ios.json" == 20.1.0
 ```
 
 Then run the following command in the Terminal.
