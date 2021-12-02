@@ -9,8 +9,8 @@ MAPBOX_COMMON_VERSION=$2
 XCFRAMEWORK_ZIP=$(mktemp).zip
 
 # artifact can be not available immediately, so here we try to wait for it's availability
-# 10 minutes
-TIMEOUT=600
+# 15 minutes
+TIMEOUT=900
 INTERVAL=30
 TIME=0
 URL="https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
