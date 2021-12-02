@@ -21,4 +21,3 @@ targets:
       - package: MapboxCommon
     settings:
         DEVELOPMENT_TEAM: "GJZR2MEM28"
-        OTHER_LDFLAGS: "-lc++"
