@@ -3,10 +3,10 @@ options:
   bundleIdPrefix: com.mapbox.navigationnative.SPM
 packages:
   MapboxCommon:
-    from: 21.0.1
+    from: 21.2.0
     url: https://github.com/mapbox/mapbox-common-ios.git
   MapboxNavigationNative:
-    from: 83.0.2
+    from: 94.0.1
     url: https://github.com/mapbox/mapbox-navigation-native-ios.git
 
 targets:
