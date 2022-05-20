@@ -9,9 +9,9 @@ MAPBOX_COMMON_VERSION=$2
 XCFRAMEWORK_ZIP=$(mktemp).zip
 
 # artifact can be not available immediately, so here we try to wait for it's availability
-# 15 minutes
-TIMEOUT=900
-INTERVAL=30
+# 60 minutes
+TIMEOUT=3600
+INTERVAL=60
 TIME=0
 URL="https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
 while [[ "$(curl -s -w ''%{http_code}'' --netrc ${URL} --output $XCFRAMEWORK_ZIP)" != "200" ]]; do 
