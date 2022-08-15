@@ -8,7 +8,7 @@ pushd "${ROOT_DIR}/Tests/SPM"
 function find_pattern {
     FILE=$1
     PATTERN=$2
-    MATCH=$(python -c "import re; import sys; print(re.findall('$PATTERN', open(sys.argv[1]).read())[0])" $FILE)
+    MATCH=$(python3 -c "import re; import sys; print(re.findall('$PATTERN', open(sys.argv[1]).read())[0])" $FILE)
     echo $MATCH
 }
 
