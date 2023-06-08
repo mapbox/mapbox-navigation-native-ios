@@ -7,6 +7,6 @@ pushd "${ROOT_DIR}/Tests/Carthage"
 
 xcodegen generate
 carthage update --platform iOS --use-netrc
-xcodebuild -project CarthageTest.xcodeproj -scheme CarthageTest -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' build
+xcodebuild -project CarthageTest.xcodeproj -scheme CarthageTest -destination "generic/platform=iOS Simulator" build
 
 popd

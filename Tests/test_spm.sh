@@ -30,6 +30,6 @@ fi
 
 # try to build test project
 xcodegen generate
-xcodebuild -project SPMTest.xcodeproj -scheme SPMTest -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' build
+xcodebuild -project SPMTest.xcodeproj -scheme SPMTest -destination "generic/platform=iOS Simulator" build
 
 popd
