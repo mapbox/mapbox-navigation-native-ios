@@ -9,6 +9,6 @@ xcodegen generate
 bundle install
 bundle exec pod repo update
 bundle exec pod install
-xcodebuild -workspace PodInstall.xcworkspace -scheme PodInstall -destination "generic/platform=iOS Simulator" build
+xcodebuild -workspace PodInstall.xcworkspace -scheme PodInstall -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' build
 
 popd
