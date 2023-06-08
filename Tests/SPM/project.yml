@@ -21,3 +21,4 @@ targets:
       - package: MapboxCommon
     settings:
         DEVELOPMENT_TEAM: "GJZR2MEM28"
+        GENERATE_INFOPLIST_FILE: YES
