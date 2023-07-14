@@ -13,7 +13,7 @@ XCFRAMEWORK_ZIP=$(mktemp).zip
 TIMEOUT=3600
 INTERVAL=60
 TIME=0
-URL="https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
+URL="https://api.mapbox.com/downloads/v2/mobile-navigation-native/snapshots/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
 while [[ "$(curl -s -w ''%{http_code}'' --netrc ${URL} --output $XCFRAMEWORK_ZIP)" != "200" ]]; do 
     >&2 echo "Artifact is not available yet. Waiting ${INTERVAL} seconds..."
     sleep ${INTERVAL}
