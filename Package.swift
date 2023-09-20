@@ -68,7 +68,7 @@ extension SDKRegistry {
     func mapboxNavigationNativeTarget(version: String, checksum: String) -> Target {
         return binaryTarget(name: "MapboxNavigationNative",
                             version: version,
-                            path: "mobile-navigation-native",
+                            path: "dash-native",
                             filename: "MapboxNavigationNative.xcframework.zip",
                             checksum: checksum)
     }
