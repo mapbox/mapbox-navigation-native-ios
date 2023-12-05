@@ -26,7 +26,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "MapboxNavigationNative",
-            url: "https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/\(version)/MapboxNavigationNative.zip",
+            url: "https://api.mapbox.com/downloads/v2/dash-native/snapshots/ios/packages/\(version)/MapboxNavigationNative.zip",
             checksum: checksum
         ),
         .testTarget(
