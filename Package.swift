@@ -24,7 +24,11 @@ let package = Package(
             name: "MapboxNavigationNativeWrapper",
             dependencies: ["MapboxCommon", "MapboxNavigationNative"]
         ),
-        registry.mapboxNavigationNativeTarget(version: version, checksum: checksum),
+        .binaryTarget(
+            name: "MapboxNavigationNative",
+            url: "https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/\(version)/MapboxNavigationNative.zip",
+            checksum: checksum
+        ),
         .testTarget(
             name: "MapboxNavigationNativeTests",
             dependencies: ["MapboxNavigationNative"]
