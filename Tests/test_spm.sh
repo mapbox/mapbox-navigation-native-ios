@@ -18,7 +18,7 @@ ACTUAL_CHECKSUM=$(find_pattern $ROOT_DIR/Package.swift "let checksum = \"(.+)\""
 echo "Current version in Package.swift: ${VERSION}"
 echo "Current checksum in Package.swift: ${ACTUAL_CHECKSUM}"
 
-URL="https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
+URL="https://api.mapbox.com/downloads/v2/dash-native/releases/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
 XCFRAMEWORK_ZIP=$(mktemp).zip
 curl -s --retry 3 --netrc ${URL} --output ${XCFRAMEWORK_ZIP}
 EXPECTED_CHECKSUM=$(swift package compute-checksum ${XCFRAMEWORK_ZIP})
@@ -30,6 +30,9 @@ fi
 
 # try to build test project
 xcodegen generate
-xcodebuild -project SPMTest.xcodeproj -scheme SPMTest -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' build
+xcodebuild -project SPMTest.xcodeproj -scheme SPMTest -destination 'platform=iOS Simulator,name=iPhone 15 Pro' build \
+    CODE_SIGN_IDENTITY="" \
+    CODE_SIGNING_REQUIRED=NO \
+    CODE_SIGNING_ALLOWED=NO
 
 popd
