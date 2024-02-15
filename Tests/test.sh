@@ -7,8 +7,10 @@ ROOT_DIR="${DIR}/.."
 echo "Testing SPM..."
 ${ROOT_DIR}/Tests/test_spm.sh
 
-echo "Testing Carthage..."
-${ROOT_DIR}/Tests/test_carthage.sh
+# TODO: remove Carthage from this repo and mapbox-native-internal.
+# It is not supported by maps and NavSDK for a long time already.
+# echo "Testing Carthage..."
+# ${ROOT_DIR}/Tests/test_carthage.sh
 
 echo "Testing CocoaPods..."
 ${ROOT_DIR}/Tests/test_cocoapods.sh
