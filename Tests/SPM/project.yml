@@ -6,7 +6,7 @@ packages:
     from: 24.2.0
     url: https://github.com/mapbox/mapbox-common-ios.git
   MapboxNavigationNative:
-    from: 303.0.0-SNAPSHOT.0304T1428Z.c4f2a5c
+    from: 303.0.0-SNAPSHOT.0305T0828Z.b2e5e2f
     url: https://github.com/mapbox/mapbox-navigation-native-ios.git
 
 targets:
