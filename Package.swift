@@ -28,10 +28,6 @@ let package = Package(
             name: "MapboxNavigationNative",
             url: "https://api.mapbox.com/downloads/v2/mobile-navigation-native/releases/ios/packages/\(version)/MapboxNavigationNative.xcframework.zip",
             checksum: checksum
-        ),
-        .testTarget(
-            name: "MapboxNavigationNativeTests",
-            dependencies: ["MapboxNavigationNative"]
         )
     ],
     cxxLanguageStandard: .cxx14
