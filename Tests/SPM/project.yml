@@ -3,7 +3,7 @@ options:
   bundleIdPrefix: com.mapbox.navigationnative.SPM
 packages:
   MapboxNavigationNative:
-    version: 314.0.0-SNAPSHOT.0709T2232Z.520773f
+    version: 314.0.0-SNAPSHOT.0711T1209Z.1ab8c7f
     url: https://github.com/mapbox/mapbox-navigation-native-ios.git
 
 targets:
