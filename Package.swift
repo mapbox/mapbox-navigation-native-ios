@@ -9,7 +9,8 @@ let checksum = "e9dfbb670e6c635496c45eb5bc62ad0bfbbffccd87b14d8d070f275d853307a2
 
 let package = Package(
     name: "MapboxNavigationNative",
-    platforms: [.iOS(.v12)],
+    // The NavNative SDK doesn't support macOS but declares the minimum macOS requirement with downstream dependencies to enable `swift run` CLI tools
+    platforms: [.iOS(.v12), .macOS(.v10_15)],
     products: [
         .library(
             name: "MapboxNavigationNative",
