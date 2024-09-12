@@ -3,9 +3,9 @@
 import PackageDescription
 import Foundation
 
-let version = "318.0.0-SNAPSHOT.0912T1204Z.44c5d60"
+let version = "318.0.0-SNAPSHOT.0912T1351Z.44c5d60"
 let mapboxCommonVersion = Version("24.7.0-beta.2")
-let checksum = "c036f457bc3e1fbcafa0d6e51a00d28bf8910e1fd515c2256b6d0e63128e471d"
+let checksum = "b4a472fc9ddfaae7914cc65750eed4692266c36a2357094df14c05f7f9d12c48"
 
 let package = Package(
     name: "MapboxNavigationNative",
