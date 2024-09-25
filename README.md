@@ -21,13 +21,13 @@ machine api.mapbox.com
 ###### Using SPM Package
 
 ```swift
-.package(url: "git@github.com:mapbox/mapbox-navigation-native-ios.git", from: "319.0.0-SNAPSHOT.0925T1922Z.58baf9f"),
+.package(url: "git@github.com:mapbox/mapbox-navigation-native-ios.git", from: "320.0.0-SNAPSHOT.0925T1954Z.1c805e5"),
 ```
 
 ##### CocoaPods
 
 ```ruby
-pod 'MapboxNavigationNative', '319.0.0-SNAPSHOT.0925T1922Z.58baf9f'
+pod 'MapboxNavigationNative', '320.0.0-SNAPSHOT.0925T1954Z.1c805e5'
 ```
 
 ##### Carthage
@@ -35,7 +35,7 @@ pod 'MapboxNavigationNative', '319.0.0-SNAPSHOT.0925T1922Z.58baf9f'
 Add the following code to your Cartfile.
 
 ```bash
-binary "https://api.mapbox.com/downloads/v2/carthage/mobile-navigation-native/MapboxNavigationNative.json" == 319.0.0-SNAPSHOT.0925T1922Z.58baf9f
+binary "https://api.mapbox.com/downloads/v2/carthage/mobile-navigation-native/MapboxNavigationNative.json" == 320.0.0-SNAPSHOT.0925T1954Z.1c805e5
 binary "https://api.mapbox.com/downloads/v2/carthage/mapbox-common/MapboxCommon-ios.json" == 24.7.0
 ```
 
