@@ -6,7 +6,7 @@ packages:
     from: 23.10.0
     url: https://github.com/mapbox/mapbox-common-ios.git
   MapboxNavigationNative:
-    from: 206.1.0
+    from: 206.1.1
     url: https://github.com/mapbox/mapbox-navigation-native-ios.git
 
 targets:
