@@ -3,9 +3,10 @@
 import PackageDescription
 import Foundation
 
-let version = "324.13.0-SNAPSHOT-04-14--04-29.git-bc7e220-SNAPSHOT.0414T0829Z.9a6ac42"
-let mapboxCommonVersion = Version("24.13.0-SNAPSHOT-04-14--04-29.git-bc7e220")
-let checksum = "bd9b69936f2ce2e9468571da473971789e42cadfc5ddff5587ca0e0ef0b76c71"
+let version = "324.13.0-SNAPSHOT-04-14--09-05.git-f6763db"
+let mapboxCommonVersion = Version("24.13.0-SNAPSHOT-04-14--09-05.git-f6763db")
+let checksum = "ac32757254015a6c1fa8a77463476a1e43b505cfc5c696796df97f8450401d2a"
+let releaseType = "snapshots"
 
 let package = Package(
     name: "MapboxNavigationNative",
@@ -18,7 +19,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", .upToNextMajor(from: mapboxCommonVersion)),
+        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", .exact(mapboxCommonVersion)),
     ],
     targets: [
         .target(
@@ -27,7 +28,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "MapboxNavigationNative",
-            url: "https://api.mapbox.com/downloads/v2/dash-native/snapshots/ios/packages/\(version)/MapboxNavigationNative.xcframework.zip",
+            url: "https://api.mapbox.com/downloads/v2/dash-native/\(releaseType)/ios/packages/\(version)/MapboxNavigationNative.xcframework.zip",
             checksum: checksum
         ),
         .testTarget(
