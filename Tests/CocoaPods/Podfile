@@ -1,5 +1,5 @@
 platform :ios, '12.0'
 
 target 'PodInstall' do
-  pod 'MapboxNavigationNative', '324.13.0-SNAPSHOT-04-23--04-29.git-3eea307-SNAPSHOT.0425T1725Z.1e3e6d1'
+  pod 'MapboxNavigationNative', '324.13.0-SNAPSHOT-04-23--04-29.git-3eea307-SNAPSHOT.0426T0931Z.86a2f27'
 end
