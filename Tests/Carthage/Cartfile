@@ -1,2 +1,2 @@
-binary "https://api.mapbox.com/downloads/v2/carthage/mobile-navigation-native/MapboxNavigationNative.json" == 324.13.0-SNAPSHOT-05-05--04-29.git-a7c22c9-SNAPSHOT.0506T2026Z.ab99f75
-binary "https://api.mapbox.com/downloads/v2/carthage/mapbox-common/MapboxCommon-ios.json" == 24.13.0-SNAPSHOT-05-05--04-29.git-a7c22c9
+binary "https://api.mapbox.com/downloads/v2/carthage/mobile-navigation-native/MapboxNavigationNative.json" == 324.13.0-SNAPSHOT-05-07--04-29.git-bd49341-SNAPSHOT.0507T1058Z.06ffe9a
+binary "https://api.mapbox.com/downloads/v2/carthage/mapbox-common/MapboxCommon-ios.json" == 24.13.0-SNAPSHOT-05-07--04-29.git-bd49341
