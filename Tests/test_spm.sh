@@ -20,7 +20,11 @@ echo "Current checksum in Package.swift: ${ACTUAL_CHECKSUM}"
 
 URL="https://api.mapbox.com/downloads/v2/dash-native/snapshots/ios/packages/${VERSION}/MapboxNavigationNative.xcframework.zip"
 XCFRAMEWORK_ZIP=$(mktemp).zip
-curl -s --retry 3 --netrc ${URL} --output ${XCFRAMEWORK_ZIP}
+echo "Downloading ${URL} to ${XCFRAMEWORK_ZIP}"
+if ! curl --fail-with-body --retry 3 --netrc ${URL} --output ${XCFRAMEWORK_ZIP}; then
+    cat ${XCFRAMEWORK_ZIP}
+    exit 1
+fi
 EXPECTED_CHECKSUM=$(swift package compute-checksum ${XCFRAMEWORK_ZIP})
 
 if [[ "$ACTUAL_CHECKSUM" != "$EXPECTED_CHECKSUM" ]]; then
@@ -28,11 +32,23 @@ if [[ "$ACTUAL_CHECKSUM" != "$EXPECTED_CHECKSUM" ]]; then
     exit 1
 fi
 
-# try to build test project
+echo "Generating the Xcode project..."
 xcodegen generate
-xcodebuild -project SPMTest.xcodeproj -scheme SPMTest -destination 'platform=iOS Simulator,name=iPhone 15 Pro' build \
-    CODE_SIGN_IDENTITY="" \
-    CODE_SIGNING_REQUIRED=NO \
-    CODE_SIGNING_ALLOWED=NO
+
+echo "Checking Installed Simulators..."
+xcrun simctl list devices
+
+echo "Building the project..."
+xcodebuild \
+    -verbose \
+    -project SPMTest.xcodeproj \
+    -scheme SPMTest \
+    -scmProvider system \
+    -packageAuthorizationProvider netrc \
+    -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5" \
+    build \
+        CODE_SIGN_IDENTITY="" \
+        CODE_SIGNING_REQUIRED=NO \
+        CODE_SIGNING_ALLOWED=NO
 
 popd
