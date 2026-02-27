@@ -5,7 +5,7 @@ import Foundation
 
 let version = "324.20.0-SNAPSHOT-02-27--00-51.git-1f41a1a"
 let mapboxCommonVersion = Version("24.20.0-SNAPSHOT-02-27--00-51.git-1f41a1a")
-let checksum = "7fd0eed9a9148ff09399b60f0c10c3999f4558e8b2f1b6b1ef1bc84ced3bdf7a"
+let checksum = "4a2179527483e1277dac792ad87e28f1fa714c720fd47a298eda7e8135edfbff"
 let releaseType = "snapshots"
 
 let package = Package(
