@@ -5,7 +5,7 @@ import Foundation
 
 let version = "324.29.0-rc.1"
 let mapboxCommonVersion = Version("24.29.0-rc.1")
-let checksum = "6c042cbe8908d61b17cd74089a9b04220662897d920c4f6ec3fe912c94fd614c"
+let checksum = "96ebfde5f421f9d007644a68621b9a2072d533c98f1fad5b654ba2d88c571a3d"
 let releaseType = "releases"
 
 let package = Package(
